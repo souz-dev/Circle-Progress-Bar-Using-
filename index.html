@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Progress Card</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="barra">
+           <div class="img-svg">   
+                <svg>
+                    <circle cx='70' cy='70' r='70'></circle>
+                    <circle cx='70' cy='70' r='70'></circle>
+                  
+                </svg>
+                <h2 class="num"> 100%</h2>
+            </div>  
+            </div>
+            <h3 class="html"> HTML</h3>
+        </div>
+
+    </div>
+            
+    <script>
+
+        const num = document.querySelector('.num')
+
+        let contador = 0
+        setInterval (()=>{
+            if(contador==70 ){
+                clearInterval()
+            }else{
+                contador++ 
+                num.textContent = contador + '%'
+            }
+            
+        }, 10)
+    </script>
+</body>
+</html>

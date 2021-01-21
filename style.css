@@ -1,0 +1,89 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgb(49, 49, 49);
+}
+
+.card {
+    display: flex;
+   align-items: center;
+    flex-direction: column;
+    
+    
+    width: 250px;
+    height: 300px;
+    background: rgb(49, 49, 49);
+    box-shadow: 4px 4px 8px rgb(19, 19, 19),
+                -4px -4px 8px rgb(70,70,70);
+    
+}
+.card .barra{
+    position: relative;
+    width: 150px;
+    height: 150px;
+ 
+    margin-top: 15px;
+}
+
+.card .barra svg {
+
+    width: 150px;
+    height: 150px;
+
+}
+
+.card .barra svg circle {
+
+    fill: none;
+    stroke-width: 10;
+    stroke: #000;
+    transform: translate(5px, 5px  );
+}
+
+.card .barra svg circle:nth-child(1){
+    stroke: rgb( 124, 124, 124);
+}
+
+.card .barra svg circle:nth-child(2) {
+
+    stroke: red;
+    animation: anime 1s linear both;
+    
+}
+@keyframes anime {
+    0%{
+        stroke-dasharray: 440;
+        stroke-dashoffset: 440;
+
+    }
+
+    100% {
+        stroke-dasharray: 308;
+        stroke-dashoffset: 0;
+    }
+}
+
+.num {
+    color: #fff;
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h3.html {
+    color: #f1f1f1f1;
+    margin-top: 40px;
+}
